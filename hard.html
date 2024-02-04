@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hard</title>
+        <link rel="stylesheet" href="hard.css">
+    </head>
+    <body id="body">
+        <button id="lev">Level: Hard &#128128</button>
+        <center><p id="para">Watch the Pictures <br>Carefully...!!</p></center>
+<button id="start" onclick="digital(),sound()">Click to start</button>
+<button id="submit" onclick="next(),sound()">Next</button>
+<center><div id="empty" style="margin-top:45px"></div></center>
+<audio style="display:none" controls loop autoplay><source src="intro.mp3" type="audio/mp3"></audio>
+    <script>
+          function sound(){const butmusic=new Audio("switch.mp3");
+    butmusic.play();}
+              function next(){ window.open("hardbut.html","_self");}
+        var width=window.innerWidth;
+        console.log(width);
+        if(( width >= 480 )){
+ a="<img src='heart.png' width='450px' height='370px'> ";
+b="<img src='onion.png'  width='450px' height='370px'>";
+ c="<img src='horse.jpg'  width='450px' height='370px'>";
+ d="<img src='paint.jpg'  width='450px' height='370px'>";
+ e="<img src='rose.jpg'  width='450px' height='370px'>";
+f="<img src='shoes.jpg'  width='450px' height='370px'>";
+ g="<img src='eye.jpg'  width='450px' height='370px'>";
+ h="<img src='cheetah.jpg'  width='450px' height='370px'>";
+ i="<img src='charlie.jpg'  width='450px' height='370px'>";
+ j= "<img src='cat.png'  width='450px' height='370px'>";
+ k="<img src='books.png'  width='450px' height='370px'>";
+ l="<img src='bag.jpg'  width='450px' height='370px'>";
+m="<img src='Annabelle.png'  width='450px' height='370px'>";
+ n="<img src='watch.jpg'  width='450px' height='370px'>";
+ o= "<img src='earings.jpg'  width='450px' height='370px'>";
+        }
+        else{
+ a="<img src='heart.png' width='290px' height='290px'> ";
+b="<img src='onion.png'  width='290px' height='290px'>";
+ c="<img src='horse.jpg'  width='290px' height='290px'>";
+ d="<img src='paint.jpg'  width='290px' height='290px'>";
+ e="<img src='rose.jpg'  width='290px' height='290px'>";
+f="<img src='shoes.jpg'  width='290px' height='290px'>";
+ g="<img src='eye.jpg'  width='290px' height='290px'>";
+ h="<img src='cheetah.jpg'  width='290px' height='290px'>";
+ i="<img src='charlie.jpg'  width='290px' height='290px'>";
+ j= "<img src='cat.png'  width='290px' height='290px'>";
+ k="<img src='books.png'  width='290px' height='290px'>";
+ l="<img src='bag.jpg'  width='290px' height='290px'>";
+ m="<img src='Annabelle.png'   width='290px' height='290px'>";
+ n="<img src='watch.jpg'   width='290px' height='290px'>";
+ o= "<img src='earings.jpg'  width='290px' height='290px'>";
+        }
+
+const photo=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o];
+
+
+z=0;
+function myfunction(){
+              
+              document.getElementById("empty").innerHTML=photo[z];
+              z=z+1;      
+          }
+          function digital(){
+              setInterval(myfunction,600);             
+                   }
+
+
+    </script>
+
+    </body>
+</html>

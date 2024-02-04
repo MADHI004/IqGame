@@ -1,0 +1,384 @@
+<html>
+    <head>
+     
+     <title>
+        iqgame
+    </title>
+    <link rel="stylesheet" href="iqgame.css">
+
+</head>
+    <body id="body">
+
+        <button onclick="digital()">click</button>
+
+        <button onclick="time()" >c</button>
+       
+
+        <script>
+                var sec=document.createElement("h1");
+             
+        
+            a=0;
+            i=20;
+            const photo=["<img src='apple.jpg'>","<img src='car.jpg'>","<img src='cricket.jpg'>","<img src='dog.jpg'>"
+        ,"<img src='elon.jpg'>","<img src='farmer.jpg'>","<img src='gate.jpg'>","<img src='noodles.jpg'>",
+       "<img src='squid.jpg'>", "<img src='taj.jpg'>"];
+       
+        let photoarr=['apple','car','cricekt','dog','elon','farmer','gate','noodles','squid','taj'];
+            function myfunction(){
+              
+                document.getElementById("body").innerHTML=photo[a];
+                a=a+1;
+        
+            }
+            function digital(){
+                setInterval(myfunction,800);             
+                     }
+                     
+                     
+                      function time(){    setInterval(second,1000); 
+                                
+                } 
+                        function second(){
+                      
+                       if(i == 0){ 
+                         sec.value="timeup";
+                         document.getElementById("body").innerHTML=sec.value;
+                         document.getElementById("body").append(result);
+                     result.addEventListener("click",function(){results()});
+                        }
+                        else{
+                         sec.value=i;
+                            i=i-1;
+                             document.getElementById("body").innerHTML=i;
+                            t();
+                        }
+                       
+                  }   
+                    
+                   var text1=document.createElement("input");
+                   var text2=document.createElement("input");
+
+                   
+                         
+                  var wire=document.createElement("button");
+                  var apple=document.createElement("button");
+                  var car=document.createElement("button");
+                  var bag=document.createElement("button");
+                  var cd=document.createElement("button");
+                  var cricket=document.createElement("button");
+                  var jhonydepp=document.createElement("button");
+                  var dog=document.createElement("button");
+                  var elon=document.createElement("button");
+                  var farmer=document.createElement("button");
+                  var home=document.createElement("button");
+                  var gate=document.createElement("button");
+                  var noodles=document.createElement("button");
+                  var pendrive=document.createElement("button");
+                  var radio=document.createElement("button");
+                  var squid=document.createElement("button");
+                  var sundar=document.createElement("button");
+                  var taj=document.createElement("button");
+
+                  var wirecan=document.createElement("button");
+                  var applecan=document.createElement("button");
+                  var carcan=document.createElement("button");
+                  var bagcan=document.createElement("button");
+                  var cdcan=document.createElement("button");
+                  var cricketcan=document.createElement("button");
+                  var jhonydeppcan=document.createElement("button");
+                  var dogcan=document.createElement("button");
+                  var eloncan=document.createElement("button");
+                  var farmercan=document.createElement("button");
+                  var homecan=document.createElement("button");
+                  var gatecan=document.createElement("button");
+                  var noodlescan=document.createElement("button");
+                  var pendrivecan=document.createElement("button");
+                  var radiocan=document.createElement("button");
+                  var squidcan=document.createElement("button");
+                  var sundarcan=document.createElement("button");
+                  var tajcan=document.createElement("button");
+
+                  var result=document.createElement("button");
+
+                  var arr=[];
+                  var testar1=[];
+                  var testar2=[];
+                 
+                 function change(x,y){ 
+                    x.style.backgroundColor="pink";           
+                   if(!arr.includes(y) && y!=null){
+                                  
+                  arr.push(y);       
+                  testar1=arr;
+                  text1.value=testar1;
+                   }}
+          
+        function cancelling(x,y){
+            x.style.backgroundColor="white";
+            if(arr.includes(y)){
+                e=arr.indexOf(y);
+            arr.splice(e,1); 
+            testar2=arr;
+            text2.value=testar2;
+         }                      
+           
+          
+        }
+        var ar1=[];
+        var ar2=[];
+      function results(){
+          if (testar2.length == 0) 
+          {
+               for(let g=0;g<testar1.length;g++){
+               if(!ar1.includes(testar1[g]))
+          {ar1.push(testar1[g]);
+               console.log(ar1);
+              console.log( ar1.length);
+          }
+          }
+          }
+          else
+          {
+               for(let h=0;h<testar2.length;h++)
+           {
+             if(!ar2.includes(testar2[h]))
+          {ar2.push(testar2[h]);
+               console.log(ar2);
+              console.log(ar2.length) ;
+          }
+          }
+          }
+          
+           
+          }
+         
+ 
+           
+                   
+           
+                
+                  function t(){ 
+                  
+                     document.getElementById("body").append(text1);
+                     document.getElementById("body").append(text2);
+                   
+
+                    document.getElementById("body").append(wire);
+                    document.getElementById("body").append(wirecan);
+                    wire.id="wire";
+                    wire.className="but";
+                    wire.textContent="wire";
+                    wire.addEventListener("click",function(){                      
+                       { change(wire,null)}                     
+                       });
+                       wirecan.className="but";
+                       wirecan.addEventListener("click",function(){                      
+                       { cancelling(wire,null)}                     
+                       });
+
+
+                      document.getElementById("body").append(apple);
+                      document.getElementById("body").append(applecan);
+                  apple.id="apple";
+                  apple.className="but";
+                  apple.textContent="apple";
+                  apple.addEventListener("click",function(){change(apple,apple.textContent)});
+                  applecan.className="but";
+                       applecan.addEventListener("click",function(){                      
+                       { cancelling(apple,apple.textContent)}                     
+                       });
+
+                  document.getElementById("body").append(car);
+                  document.getElementById("body").append(carcan);
+                  car.id="car";
+                  car.className="but";
+                  car.textContent="car";
+                  car.addEventListener("click",function(){change(car,car.textContent)});
+                  carcan.className="but";
+                       carcan.addEventListener("click",function(){                      
+                       { cancelling(car,car.textContent)}                     
+                       });
+
+                  document.getElementById("body").append(bag);
+                  document.getElementById("body").append(bagcan);
+                  bag.id="bag";
+                  bag.className="but";
+                  bag.textContent="bag";
+                  bag.addEventListener("click",function(){change(bag,null)});
+                  bagcan.className="but";
+                       bagcan.addEventListener("click",function(){                      
+                       { cancelling(bag,null)}                     
+                       });
+
+                  document.getElementById("body").append(cd);
+                  document.getElementById("body").append(cdcan);
+                  cd.id="cd";
+                  cd.className="but";
+                  cd.textContent="cd";
+                  cd.addEventListener("click",function(){change(cd,null)});
+                  cdcan.className="but";
+                       cdcan.addEventListener("click",function(){                      
+                       { cancelling(cd,null)}                     
+                       });
+
+                  document.getElementById("body").append(cricket);
+                  document.getElementById("body").append(cricketcan);
+                  cricket.id="cricket";
+                  cricket.className="but";
+                  cricket.textContent="cricket";
+                  cricket.addEventListener("click",function(){change(cricket,cricket.textContent)});
+                  cricketcan.className="but";
+                       cricketcan.addEventListener("click",function(){                      
+                       { cancelling(cricket,cricket.textContent)}                     
+                       });
+
+                  document.getElementById("body").append(jhonydepp);
+                  document.getElementById("body").append(jhonydeppcan);
+                  jhonydepp.id="jhonydepp";
+                  jhonydepp.className="but";
+                  jhonydepp.textContent="jhonydepp";
+                  jhonydepp.addEventListener("click",function(){change(jhonydepp,null)});
+                  jhonydeppcan.className="but";
+                       jhonydeppcan.addEventListener("click",function(){                      
+                       { cancelling(jhonydepp,null)}                     
+                       });
+
+
+                  document.getElementById("body").append(dog);
+                  document.getElementById("body").append(dogcan);
+                  dog.id="dog";
+                  dog.className="but";
+                  dog.textContent="dog";
+                  dog.addEventListener("click",function(){change(dog,dog.textContent)});
+                  dogcan.className="but";
+                       dogcan.addEventListener("click",function(){                      
+                       { cancelling(dog,dog.textContent)}                     
+                       });
+
+                  document.getElementById("body").append( elon);
+                  document.getElementById("body").append( eloncan);
+                  elon.id=" elon";
+                  elon.className="but";
+                  elon.textContent=" elon";
+                  elon.addEventListener("click",function(){change(elon,elon.textContent)});
+                  eloncan.className="but";
+                       eloncan.addEventListener("click",function(){                      
+                       { cancelling(elon,elon.textContent)}                     
+                       });
+
+                  document.getElementById("body").append(farmer);
+                  document.getElementById("body").append(farmercan);
+                  farmer.id="farmer";
+                  farmer.className="but";
+                  farmer.textContent="farmer";
+                  farmer.addEventListener("click",function(){change(farmer,farmer.textContent)});
+                  farmercan.className="but";
+                       farmercan.addEventListener("click",function(){                      
+                       { cancelling(farmer,farmer.textContent)}                     
+                       });
+
+
+                  document.getElementById("body").append(home);
+                   document.getElementById("body").append(homecan);
+                  home.id="home";
+                  home.className="but";
+                  home.textContent="home";
+                  home.addEventListener("click",function(){change(home,null)});
+                  homecan.className="but";
+                       homecan.addEventListener("click",function(){                      
+                       { cancelling(home,null)}                     
+                       });
+
+                  document.getElementById("body").append(gate);
+                  document.getElementById("body").append(gatecan);
+                  gate.id="gate";
+                  gate.className="but";
+                  gate.textContent="gate";
+                  gate.addEventListener("click",function(){change(gate,gate.textContent)});
+                  gatecan.className="but";
+                       gatecan.addEventListener("click",function(){                      
+                       { cancelling(gate,gate.textContent)}                     
+                       });
+
+
+                  document.getElementById("body").append(noodles);
+                  document.getElementById("body").append(noodlescan);
+                  noodles.id="noodles";
+                  noodles.className="but";
+                  noodles.textContent="noodles";
+                  noodles.addEventListener("click",function(){change(noodles,noodles.textContent)});
+                  noodlescan.className="but";
+                       noodlescan.addEventListener("click",function(){                      
+                       { cancelling(noodles,noodles.textContent)}                     
+                       });
+
+
+                  document.getElementById("body").append(pendrive);
+                  
+                  document.getElementById("body").append(pendrivecan);
+                  pendrive.id="pendrive";
+                  pendrive.className="but";
+                  pendrive.textContent="pendrive";
+                  pendrive.addEventListener("click",function(){change(pendrive,null)});
+                  pendrivecan.className="but";
+                       pendrivecan.addEventListener("click",function(){                      
+                       { cancelling(pendrive,null)}                     
+                       });
+
+                  document.getElementById("body").append(radio);
+                  document.getElementById("body").append(radiocan);
+                  radio.id="radio";
+                  radio.className="but";
+                  radio.textContent="radio";
+                  radio.addEventListener("click",function(){change(radio,null)});
+                  radiocan.className="but";
+                       radiocan.addEventListener("click",function(){                      
+                       { cancelling(radio,null)}                     
+                       });
+
+                  document.getElementById("body").append(squid);
+                  document.getElementById("body").append(squidcan);
+                  squid.id="squid";
+                  squid.className="but";
+                  squid.textContent="squid";
+                  squid.addEventListener("click",function(){change(squid,squid.textContent)});
+                  squidcan.className="but";
+                       squidcan.addEventListener("click",function(){                      
+                       { cancelling(squid,squid.textContent)}                     
+                       });
+
+                  document.getElementById("body").append(sundar);
+                  document.getElementById("body").append(sundarcan);
+                  sundar.id="sundar";
+                  sundar.className="but";
+                  sundar.textContent="sundar";
+                  sundar.addEventListener("click",function(){change(sundar,null)});
+                  sundarcan.className="but";
+                       sundarcan.addEventListener("click",function(){                      
+                       { cancelling(sundar,null)}                     
+                       });
+
+                  document.getElementById("body").append(taj);
+                  document.getElementById("body").append(tajcan);
+                  taj.id="taj";
+                  taj.className="but";
+                  taj.textContent="taj";
+                  taj.addEventListener("click",function(){change(taj,taj.textContent)});
+                  tajcan.className="but";
+                       tajcan.addEventListener("click",function(){                      
+                       { cancelling(taj,taj.textContent)}                     
+                       });
+                 }
+                          
+                     
+                    
+        
+          
+
+        </script>
+    </body>
+</html>
+
+
+

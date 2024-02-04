@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mediumbut</title>
+        <link rel="stylesheet" href="easybut.css">
+       
+    </head>
+    <body id="body">
+       <center><p id="para"> Select the Correct <br>Options in 10 seconds</p></center>
+       <button id="start" onclick="time(),sound()">Click to start</button>
+       <input type="button" id="text" style="display:none">
+       <button style="display:none"  id="result" onclick="results()">Click for <br>Your Results...!</button>
+       <input type="button" id="lev" style="display:none">
+       <div id="welcome" style="display:none"></div>
+       <input type="text" id="resbox" style="display:none">
+       <button id="again" style="display:none" onclick="again(),sound()">Play Again!</button>
+       <div id="box" style="display:none"></div>
+       <audio id="war" style="display:none" controls loop autoplay><source src="warning.mp3" type="audio/mp3"></audio>
+<button class="but" id="wire" style="display:none" value="1" onclick="change('wire',null)">Wire</button>
+<button class="but" id="apple" style="display:none" value="1" onclick="change('apple',null)">Apple</button>
+<button class="but" id="bottle" style="display:none" value="1" onclick="change('bottle','bottle')">Bottle</button>
+<button class="but"  id="bag" style="display:none" value="1" onclick="change('bag',null)">Bag</button>
+
+<button class="but" id="key" style="display:none" value="1" onclick="change('key','key')">Key</button>
+<button class="but" id="jhonydepp" style="display:none" value="1" onclick="change('jhonydepp',null)">Jhony Depp</button>
+<button class="but"  id="remote" style="display:none" value="1" onclick="change('remote','remote')">Remote</button>
+<button class="but" id="horse" style="display:none" value="1" onclick="change('horse','horse')">Horse</button>
+
+<button class="but"  id="home" style="display:none" value="1" onclick="change('home',null)">Home</button>
+<button class="but" id="onion" style="display:none" value="1" onclick="change('onion','onion')">Onion</button>
+
+<button class="but"  id="pendrive" style="display:none" value="1" onclick="change('pendrive',null)">Pendrive</button>
+<button class="but" id="radio" style="display:none" value="1" onclick="change('radio',null)">Radio</button>
+<button class="but"  id="chess" style="display:none" value="1" onclick="change('chess','chess')">Chess</button>
+<button class="but" id="tv" style="display:none" value="1" onclick="change('tv',null)">Radio</button>
+<button class="but"  id="tomjerry" style="display:none" value="1" onclick="change('tomjerry','tomjerry')">Tom and Jerry</button>
+       <script>
+          function sound(){const butmusic=new Audio("switch.mp3");
+    butmusic.play();}
+                 var width=window.innerWidth;
+          i=11;
+         var sum=document.querySelectorAll('.but');
+        
+         function time(){    setInterval(second,1000); 
+                                
+                            } 
+                                    function second(){
+                                  
+                                   if(i == 0){ 
+                                     sec="Timeup";
+                                     document.getElementById("text").value=sec;
+                                     document.getElementById("text").style.fontSize="20px";
+                                  sum.forEach(function(s){ s.style.display="none";
+                                  document.getElementById("result").style.display="inline";
+                                  document.getElementById("para").style.display="none";
+                                  document.getElementById("start").style.display="none";
+                                  document.getElementById("text").style.marginTop="50px";
+                                 
+                    });
+                
+                                
+                                    }
+                                    else{
+                                  
+                                     sec=i;
+                                        i=i-1;
+                                         document.getElementById("text").value=i;
+                                         sum.forEach(function(s){ s.style.display="inline";
+                                         if(( width >= 480 )){
+                                        s.style.margin="60px";
+                                        s.style.marginTop="40px";}
+                                        else{ s.style.margin="20px";
+                                        s.style.marginTop="30px";}
+                                        document.getElementById("text").style.display="block";
+                                   
+                                })
+                                      
+                                    }}
+                                                
+                         function again(){
+                          window.open("index.html","_self");
+                         }
+                                  
+                     var arr=[];
+                  var testar1=[];
+                  var testar2=[];
+                 
+                 function change(m,n){ 
+                  const optsound=new Audio("optsound.mp3");
+optsound.play();
+                    var x=document.getElementById(m);
+                    var y=n;
+                    if(x.value == 1){
+                        x.style.backgroundColor="#361638";  
+                                 
+                   if(!arr.includes(y) && y!=null){
+                                  
+                  arr.push(y);       
+                  testar1=arr;
+             
+                 
+                   }
+                   x.value=0;
+                    }
+                    else{
+                        x.style.backgroundColor="#072E33";
+            if(arr.includes(y)){
+                e=arr.indexOf(y);
+            arr.splice(e,1); 
+            testar2=arr;
+           
+           
+         }    x.value=1;     
+                    }
+                   }
+                   var result=document.createElement("button");
+                   var ar1=[];
+        var ar2=[];
+        
+      function results(){
+
+        document.getElementById("war") .pause();
+        document.getElementById("war").currentTime=0;
+        document.getElementById("box").style.display="block";
+        document.getElementById("welcome").style.display="block";
+       document.getElementById("again").style.display="block";
+          if (testar2.length == 0) 
+          {
+               for(let g=0;g<testar1.length;g++){
+               if(!ar1.includes(testar1[g]))
+          {ar1.push(testar1[g]);
+               console.log(ar1);
+            len=ar1.length;
+          }
+
+          }
+          }
+          
+          else
+          {
+               for(let h=0;h<testar2.length;h++)
+           {
+             if(!ar2.includes(testar2[h]))
+          {ar2.push(testar2[h]);
+               console.log(ar2);
+             len=ar2.length;
+          }
+          }
+          }
+          document.getElementById("lev").style.display="block";
+          document.getElementById("resbox").style.display="block";
+          o=len+"0";
+          f=(Number(o)+Number(30))
+        resbox.value="Your IQ Score is "+f;
+        if(len <= 3)
+        {    document.getElementById("lev").style.backgroundColor="red";
+        document.getElementById("lev").value="weak".concat(String.fromCodePoint(128543));
+        document.getElementById("lev").style.borderColor="transparent";
+        document.getElementById("lev").style.boxShadow="0px 0px 20px red";
+        const weak=new Audio("weak.mp3");
+    weak.play();
+    }
+        else if(len <= 5 && len > 3 )
+        {    document.getElementById("lev").style.backgroundColor="orange";
+        document.getElementById("lev").value="normal".concat(String.fromCodePoint(128519));
+        document.getElementById("lev").style.borderColor="transparent";
+        document.getElementById("lev").style.boxShadow="0px 0px 20px orange";
+        const nor=new Audio("normal.mp3");
+    nor.play();}
+        else
+        {    document.getElementById("lev").style.backgroundColor="green";
+        document.getElementById("lev").value="excellent".concat(String.fromCodePoint(129321));
+        document.getElementById("lev").style.borderColor="transparent";
+        document.getElementById("lev").style.boxShadow="0px 0px 20px green";
+      const ex=new Audio("excellent.mp3");
+    ex.play();}}
+          
+         
+                
+       </script>
+    </body>
+</html>

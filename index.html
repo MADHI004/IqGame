@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>main</title>
+        <link rel="stylesheet" href="main.css">
+     
+    </head>
+    <body id="body">
+        <div class="welcome">
+            <div id="welcome"></div>
+            <center><label id="name">Your name &#128525</label><br>
+                <input type="text" id="nameval" >
+               <br><br><br>
+               <label id="levels">Select Levels &#129321</label>
+                <select id="level">Levels
+                    <optgroup  >
+                <option value="Easy" >Easy &#129392</option>
+                <option value="Medium">Medium &#128127</option>
+                <option value="Hard">Hard &#128128</option></optgroup>
+                       </select>                                        
+                    <button id="submit" onclick="output(),sound()">Next</button>
+                    
+                <audio id="intro" style="display:none" controls loop autoplay><source src="intro.mp3" type="audio/mp3"></audio>
+          </center>          
+                </div>
+
+
+                <script>
+                 function sound(){const butmusic=new Audio("switch.mp3");
+                butmusic.play();}
+                    function output(){ selectval=document.querySelector("#level");
+                    o=selectval.value;
+                    if(o == "Easy")
+            {
+                window.open("easy.html","_self");
+            }
+        else if (o == "Medium") {
+            window.open("medium.html","_self");
+        } else {
+            window.open("hard.html","_self");
+        }
+    }         
+                 
+                </script>
+
+    </body>
+</html>

@@ -1,0 +1,174 @@
+body{
+  background-image:url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+ 
+}
+#lev{
+  position: absolute;right:50px;
+  background: linear-gradient(to right,#361638,#072E33);
+    width: 200px;
+  height:35px;
+  border-radius: 50px;
+  border-color:rgb(160, 2, 63) ;
+  border-style: none;
+  font-size: 20px;
+  color:grey;
+
+  font-family:cursive;
+}
+#para{
+font-size: 40px;
+color:white;
+font-family:cursive;
+position:relative;top:20px;
+}
+#start{
+margin-left:550px;
+background: linear-gradient(to bottom right,#361638,black);
+    width: 150px;
+  height:35px;   
+ border-radius: 10px;
+  border-color:rgb(160, 2, 63) ;
+  border-style: double;
+  font-size: 20px;
+  color:grey;
+animation: startani 1.5s linear infinite;
+  font-family:cursive;
+}
+#empty{
+width:470px;
+height:380px;
+background-color: black;
+padding:10px;
+
+}
+@keyframes startani {
+0%{
+  box-shadow:0px 0px 15px rgb(160, 2, 63) ;
+}
+50%{
+  box-shadow:0px 0px 25px rgb(160, 2, 63) ;
+}
+100%{
+  box-shadow:0px 0px 15px rgb(160, 2, 63) ;
+}
+
+}
+#submit{
+position: absolute;bottom:50px;right:50px;
+background: linear-gradient(to right,#361638,#072E33);
+
+width: 100px;
+height:35px;
+border-radius: 50px;
+border-color:rgb(160, 2, 63) ;
+border-style: none;
+font-size: 20px;
+color:grey;
+animation: butani 1s linear infinite ;
+font-family:cursive;
+
+}
+@keyframes butani {
+0%{
+    box-shadow: 0px 0px 15px rgb(160, 2, 63);
+}
+50%
+{
+    box-shadow: 0px 0px 25px rgb(160, 2, 63);
+}
+100%
+{
+    box-shadow: 0px 0px 15px rgb(160, 2, 63);
+}}
+
+@media only screen and (max-width:480px)
+{
+
+#lev{
+  position: absolute;right:20px;
+  background: linear-gradient(to right,#361638,#072E33);
+    width: 150px;
+  height:35px;
+  border-radius: 50px;
+  border-color:rgb(160, 2, 63) ;
+  border-style: none;
+  font-size: 20px;
+  color:grey;
+  animation: butani 1s linear infinite ;
+  font-family:cursive;
+}
+#para{
+font-size: 40px;
+color: rgb(179, 174, 174);
+font-family:cursive;
+position:relative;top:55px;
+}
+
+
+#start{
+margin-left:120px;
+margin-top: 40px;
+background: linear-gradient(to bottom right,#361638,black);
+    width: 110px;
+  height:35px;   
+ border-radius: 10px;
+  border-color:rgb(160, 2, 63) ;
+  border-style: double;
+  font-size: 20px;
+  color:grey;
+animation: startani 1.5s linear infinite;
+  font-family:cursive;
+}
+
+
+@keyframes startani {
+0%{
+  box-shadow:0px 0px 15px rgb(160, 2, 63) ;
+}
+50%{
+  box-shadow:0px 0px 25px rgb(160, 2, 63) ;
+}
+100%{
+  box-shadow:0px 0px 15px rgb(160, 2, 63) ;
+}
+
+}
+#empty{
+width:300px;
+height:300px;
+background-color: black;
+padding:10px;
+
+}
+#submit{
+position: absolute;bottom:25px;right:30px;
+background: linear-gradient(to right,#361638,#072E33);
+
+width: 80px;
+height:35px;
+border-radius: 50px;
+border-color:rgb(160, 2, 63) ;
+border-style: none;
+font-size: 20px;
+color:grey;
+animation: butani 1s linear infinite ;
+font-family:cursive;
+
+}
+@keyframes butani {
+0%{
+    box-shadow: 0px 0px 15px rgb(160, 2, 63);
+}
+50%
+{
+    box-shadow: 0px 0px 25px rgb(160, 2, 63);
+}
+100%
+{
+    box-shadow: 0px 0px 15px rgb(160, 2, 63);
+}}
+
+}

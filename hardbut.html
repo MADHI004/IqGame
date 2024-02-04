@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mediumbut</title>
+        <link rel="stylesheet" href="hardbut.css">
+       
+    </head>
+    <body id="body">
+       <center><p id="para"> Select the Correct <br>Options in 10 seconds</p></center>
+       <button id="start" onclick="time(),sound()">Click to start</button>
+       <input type="button" id="text" style="display:none">
+       <button style="display:none"  id="result" onclick="results(),sound()">Click for <br>Your Results...!</button>
+       <input type="button" id="lev" style="display:none">
+       <div id="welcome" style="display:none"></div>
+       <input type="text" id="resbox" style="display:none">
+       <button id="again" style="display:none" onclick="again(),sound()">Play Again!</button>
+       <div id="box" style="display:none"></div>
+       <audio id="war" style="display:none" controls loop autoplay><source src="warning.mp3" type="audio/mp3"></audio>
+  
+<button class="but" id="heart" style="display:none" value="1" onclick="change('heart','heart')">Heart</button>
+<button class="but" id="onion" style="display:none" value="1" onclick="change('onion','onion')">Onion</button>
+<button class="but"  id="rocket" style="display:none" value="1" onclick="change('rocket',null)">Rocket</button>
+<button class="but" id="horse" style="display:none" value="1" onclick="change('horse','horse')">Horse</button>
+<button class="but" id="cd" style="display:none" value="1" onclick="change('cd',null)">Cd</button>
+<button class="but" id="paint" style="display:none" value="1" onclick="change('paint','paint')">Paint</button>
+<button class="but" id="nun" style="display:none" value="1" onclick="change('nun',null)">Nun</button>
+<button class="but"  id="rose" style="display:none" value="1" onclick="change('rose','rose')">Rose</button>
+<button class="but" id="shoes" style="display:none" value="1" onclick="change('shoes','shoes')">Shoes</button>
+<button class="but" id="eye" style="display:none" value="1" onclick="change('eye','eye')">Eye</button>
+<button class="but"  id="home" style="display:none" value="1" onclick="change('home',null)">Home</button>
+<button class="but" id="cheetah" style="display:none" value="1" onclick="change('cheetah','cheetah')">Cheetah</button>
+<button class="but" id="charlie" style="display:none" value="1" onclick="change('charlie','charlie')">Charlie</button>
+<button class="but"  id="pendrive" style="display:none" value="1" onclick="change('pendrive',null)">Pendrive</button>
+<button class="but" id="radio" style="display:none" value="1" onclick="change('radio',null)">Radio</button>
+<button class="but"  id="cat" style="display:none" value="1" onclick="change('cat','cat')">Cat</button>
+<button class="but" id="sundar" style="display:none" value="1" onclick="change('sundar',null)">Sundar Pichai</button>
+<button class="but"  id="books" style="display:none" value="1" onclick="change('books','books')">Books</button>
+<button class="but" id="bag" style="display:none" value="1" onclick="change('bag','bag')">Bag</button>
+<button class="but" id="Annabelle" style="display:none" value="1" onclick="change('Annabelle','Annabelle')">Annabelle</button>
+<button class="but"  id="pen" style="display:none" value="1" onclick="change('pen',null)">Pen</button>
+<button class="but" id="laptop" style="display:none" value="1" onclick="change('laptop',null)">Laptop</button>
+<button class="but"  id="watch" style="display:none" value="1" onclick="change('watch','watch')">Watch</button>
+<button class="but" id="mirror" style="display:none" value="1" onclick="change('mirror',null)">Mirror</button>
+<button class="but"  id="earings" style="display:none" value="1" onclick="change('earings','earings')">Earings</button>
+       <script>
+               function sound(){const butmusic=new Audio("switch.mp3");
+    butmusic.play();}
+          i=10;
+         var sum=document.querySelectorAll('.but');
+        
+         function time(){    setInterval(second,1000); 
+                                
+                            } 
+                            var width=window.innerWidth;
+                                    function second(){
+                                  
+                                   if(i == 0){ 
+                                     sec="Timeup";
+                                     document.getElementById("text").value=sec;
+                                     document.getElementById("text").style.fontSize="20px";
+                                  sum.forEach(function(s){ s.style.display="none";
+                                  document.getElementById("result").style.display="inline";
+                                  document.getElementById("para").style.display="none";
+                                  document.getElementById("start").style.display="none";
+                                  document.getElementById("text").style.marginTop="50px";
+                                 
+                    });
+                
+                                
+                                    }
+                                    else{
+                                     sec=i;
+                                        i=i-1;
+                                      
+                                         document.getElementById("text").value=i;
+                                         sum.forEach(function(s){ s.style.display="inline";
+                                         if(( width >= 480 )){
+                                        s.style.margin="40px";
+                                        s.style.marginTop="20px";}
+                                        else{ 
+                                            document.getElementById("para").style.display="none";s.style.margin="10px";
+                                        s.style.marginTop="10px";}
+                                        document.getElementById("text").style.display="block";
+                                   
+                                })
+                                      
+                                    }}
+                                                
+                         function again(){
+                          window.open("index.html","_self");
+                         }
+                                  
+                     var arr=[];
+                  var testar1=[];
+                  var testar2=[];
+                 
+                 function change(m,n){ 
+                    const optsound=new Audio("optsound.mp3");
+optsound.play();
+                    var x=document.getElementById(m);
+                    var y=n;
+                    if(x.value == 1){
+                        x.style.backgroundColor="#361638";  
+                                 
+                   if(!arr.includes(y) && y!=null){
+                                  
+                  arr.push(y);       
+                  testar1=arr;
+             
+                 
+                   }
+                   x.value=0;
+                    }
+                    else{
+                        x.style.backgroundColor="#072E33";
+            if(arr.includes(y)){
+                e=arr.indexOf(y);
+            arr.splice(e,1); 
+            testar2=arr;
+           
+           
+         }    x.value=1;     
+                    }
+                   }
+                   var result=document.createElement("button");
+                   var ar1=[];
+        var ar2=[];
+        
+      function results(){
+        document.getElementById("box").style.display="block";
+        document.getElementById("welcome").style.display="block";
+       document.getElementById("again").style.display="block";
+          if (testar2.length == 0) 
+          {
+               for(let g=0;g<testar1.length;g++){
+               if(!ar1.includes(testar1[g]))
+          {ar1.push(testar1[g]);
+               console.log(ar1);
+            len=ar1.length;
+          }
+
+          }
+          }
+          
+          else
+          {
+               for(let h=0;h<testar2.length;h++)
+           {
+             if(!ar2.includes(testar2[h]))
+          {ar2.push(testar2[h]);
+               console.log(ar2);
+             len=ar2.length;
+          }
+          }
+          }
+          document.getElementById("lev").style.display="block";
+          document.getElementById("resbox").style.display="block";
+          r=len-5;
+        
+        if(len <= 5)
+        {    document.getElementById("lev").style.backgroundColor="red";
+        document.getElementById("lev").value="weak".concat(String.fromCodePoint(128543));
+        document.getElementById("lev").style.borderColor="transparent";
+        document.getElementById("lev").style.boxShadow="0px 0px 20px red";
+        resbox.value="Your IQ Score is "+"10";
+        const weak=new Audio("weak.mp3");
+    weak.play();
+    }
+        else if(len <= 10 && len > 6 )
+        {    document.getElementById("lev").style.backgroundColor="orange";
+        document.getElementById("lev").value="normal".concat(String.fromCodePoint(128519));
+        document.getElementById("lev").style.borderColor="transparent";
+        document.getElementById("lev").style.boxShadow="0px 0px 20px orange";
+       
+        resbox.value="Your IQ Score is "+r+"0";
+        const nor=new Audio("normal.mp3");
+    nor.play();}
+        else
+        {    document.getElementById("lev").style.backgroundColor="green";
+        document.getElementById("lev").value="excellent".concat(String.fromCodePoint(129321));
+        document.getElementById("lev").style.borderColor="transparent";
+        document.getElementById("lev").style.boxShadow="0px 0px 20px green";
+        resbox.value="Your IQ Score is "+r+"0";
+        const ex=new Audio("excellent.mp3");
+    ex.play();}}
+          
+         
+                
+       </script>
+    </body>
+</html>
