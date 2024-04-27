@@ -23,7 +23,7 @@ font-size: 35px;}
 #welcome{
     height:450px;
     width:450px;
-    position: absolute;left:413px;top:89px;
+    position: absolute;left:518px;top:89px;
     background: linear-gradient(to top right,rgb(5, 5, 75) ,rgb(160, 2, 63));
     z-index:-1;
     border-radius: 100%;
